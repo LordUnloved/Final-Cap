@@ -1,7 +1,6 @@
-## Live Deployed Frontend: https://restaurant-reservation-app-frontend-p6j1.onrender.com
-## Live Deployed Backend: https://dashboard.render.com/web/srv-cfqh9gqrrk08lt7ogsmg
+## Live Deployed Frontend:
 
-# Capstone: Restaurant Reservation System
+# Capstone: Restaurant Reservations
 
 > You have been hired as a full stack developer at _Periodic Tables_, a startup that is creating a reservation system for fine dining restaurants.
 > The software is used only by restaurant personnel when a customer calls to request a reservation.
