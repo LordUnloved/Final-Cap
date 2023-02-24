@@ -30,7 +30,7 @@ function Dashboard({ date }) {
   useEffect(loadReservations, [date]);
   useEffect(loadTables, [reservations]);
 
-  //when reservations are loaded, display either list of reservations, or alert that no reservations are on this date
+  //displays list of reservations or alert  no reservations
   useEffect(() => {
     if (reservations.length) {
       setDisplayReservations(
@@ -104,7 +104,7 @@ function Dashboard({ date }) {
       <div className="input-group input-group-sm mb-3">
         <div className="d-flex d-md-inline mb-3 btn-group input-group-prepend">
           <button
-            className="btn btn-info btn-sm mb-3"
+            className="btn btn-secondary btn-sm mb-3"
             onClick={() => history.push(`/dashboard?date=${previous(date)}`)}
           >
             <span className="oi oi-chevron-left mr-2" />
@@ -118,7 +118,7 @@ function Dashboard({ date }) {
             Today
           </button>
           <button
-            className="btn btn-info btn-sm mb-3"
+            className="btn btn-secondary btn-sm mb-3"
             onClick={() => history.push(`/dashboard?date=${next(date)}`)}
           >
             Next
