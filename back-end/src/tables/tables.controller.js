@@ -8,9 +8,8 @@ async function list(req, res) {
   res.json({ data });
 }
 
-// list tables that are not occupied (reservation_id is null)
+// returns list of unoccupied tables
 async function listFree(req, res) {
-  // const capacity = res.locals.capacity;  //filters list of tables by capacity. This functionality breaks testing but I want to implement it for portfolio.
   const data = await service.listFree(/* capacity */);
   res.json({ data });
 }
@@ -41,7 +40,7 @@ function hasOnlyValidProperties(req, res, next) {
 
 const hasRequiredProperties = hasProperties(...REQUIRED_PROPERTIES);
 
-// table name must be at least 2 characters long
+// name length validation
 function tableNameIsValid(req, res, next) {
   const { table_name } = req.body.data;
   const length = table_name.length;
@@ -86,9 +85,9 @@ async function tableExists(req, res, next) {
   });
 }
 
-//updates table and reservation at the same time.
-//table is assigned a reservation_id
-//reservation is given a status of "seated"
+// Updates table and reservation
+// Assign reservation id to table
+// give reservation seated status
 async function seat(req, res, next) {
   const updatedTable = {
     ...res.locals.table,

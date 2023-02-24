@@ -17,7 +17,7 @@ import { previous, next, getDisplayDate } from "../utils/date-time";
 function Dashboard({ date }) {
   let query = useQuery();
   date = query.get("date") || date;
-  const displayDate = getDisplayDate(date); //displays date in format: Friday, Jan 1 2021
+  const displayDate = getDisplayDate(date); // shows current date in western format
 
   const history = useHistory();
   const [reservations, setReservations] = useState([]);
