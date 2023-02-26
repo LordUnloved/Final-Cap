@@ -96,29 +96,29 @@ function Dashboard({ date }) {
 
   return (
     <>
-      <h1>Dashboard</h1>
-      <div className="d-md-flex mb-3">
+      <h1 className="d-md-flex justify-content-center">Dashboard</h1>
+      <div className="d-md-flex justify-content-center mb-3">
         <h3 className="mb-0">{displayDate.display}</h3>
       </div>
       {/* button group (previous, Today, Next, and date picker) */}
-      <div className="input-group input-group-sm mb-3">
+      <div className="input-group input-group-sm justify-content-center mb-3">
         <div className="d-flex d-md-inline mb-3 btn-group input-group-prepend">
           <button
-            className="btn btn-secondary btn-sm mb-3"
+            className="btn btn-secondary btn-sm mb-3" id="previousBtn"
             onClick={() => history.push(`/dashboard?date=${previous(date)}`)}
           >
             <span className="oi oi-chevron-left mr-2" />
             Previous
           </button>
           <button
-            className="btn btn-info btn-sm mb-3"
+            className="btn btn-info btn-sm mb-3" id="todayBtn"
             onClick={() => history.push(`/dashboard`)}
           >
             <span className="oi oi-calendar mr-2" />
             Today
           </button>
           <button
-            className="btn btn-secondary btn-sm mb-3"
+            className="btn btn-secondary btn-sm mb-3" id="nxtBtn"
             onClick={() => history.push(`/dashboard?date=${next(date)}`)}
           >
             Next
