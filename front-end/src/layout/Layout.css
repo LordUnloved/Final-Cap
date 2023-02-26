@@ -2,3 +2,14 @@
   background-color: #393a44;
   min-width: 200px;
 }
+
+#previousBtn, #nxtBtn, #todayBtn {
+  border: 25px;
+  border-radius: 5px;
+  border-color: black;
+  box-shadow:inset 2px 3px 6px rgb(0, 0, 0);
+}
+
+#nxtBtn {
+  margin-right: 10px;
+}
