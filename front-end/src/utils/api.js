@@ -5,7 +5,7 @@
 import formatReservationDate from "./format-reservation-date";
 import formatReservationTime from "./format-reservation-date";
 
-const API_BASE_URL = "https://restaurant-reservation-zp4g.onrender.com";
+const API_BASE_URL = "https://restaurants-backend-9yra.onrender.com";
 
 /**
  * Defines the default headers for these functions to work with `json-server`
